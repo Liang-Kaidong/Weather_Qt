@@ -130,4 +130,4 @@ void Weather::getWeatherInfo(QString cityName)
 
 ## 👨‍💻 作者
 
-KD
+Kaydon
