@@ -97,19 +97,28 @@ chmod +x Weather
 ## 🔑 API 配置
 
 本项目依赖天气 API，请自行申请 Key。
+本项目用到的api网站：https://uapis.cn/tools
+请遵守网站的相关规则，如出现不良后果，请自负。
 
 在代码中配置：
 
 ```cpp
-QString apiKey = "你的API_KEY";
+void Weather::getWeatherInfo(QString cityName)
+{
+    /* cityName留空，则自动获取当地位置 */
+    QUrl url("https://uapis.cn/api/v1/misc/weather?city=" + cityName + "&forecast=true&extended=true");
+    netAccessManager->get(QNetworkRequest(url));
+}
 ```
+
+请注意，如果使用其他api，则需要修改weatherData.h相关的格式，再次不过多赘述。
 
 ---
 
 ## ⚠️ 已知问题
 
 * 如果windows上，则无需关注输入法问题；如果是用于嵌入式设备，请自行编译并移植适合的输入法来输入城市名（需设置 `QT_IM_MODULE`）
-* UI 适配仍有优化空间
+* UI 适配仍有优化空间，特别是曲线绘制，可能会有所遮挡。由于是用于嵌入式开发板，请确保有足够的空间绘制曲线，将调好的位置参数应用于要修改的地方即可
 
 ---
 
