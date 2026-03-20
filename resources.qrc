@@ -1,0 +1,27 @@
+<RCC>
+    <qresource prefix="/background">
+        <file>resources/background/cloudy.png</file>
+        <file>resources/background/overcast.png</file>
+        <file>resources/background/sunny.png</file>
+        <file>resources/background/foggy.png</file>
+        <file>resources/background/rain.png</file>
+        <file>resources/background/sandstorm.png</file>
+        <file>resources/background/thunderRain.png</file>
+        <file>resources/background/snow.png</file>
+    </qresource>
+    <qresource prefix="/icons">
+        <file>resources/icons/airQuality.png</file>
+        <file>resources/icons/cloudy.png</file>
+        <file>resources/icons/overcast.png</file>
+        <file>resources/icons/rain.png</file>
+        <file>resources/icons/refresh.png</file>
+        <file>resources/icons/search.png</file>
+        <file>resources/icons/snow.png</file>
+        <file>resources/icons/sunny.png</file>
+        <file>resources/icons/thunderRain.png</file>
+        <file>resources/icons/humidity.png</file>
+        <file>resources/icons/foggy.png</file>
+        <file>resources/icons/sandDust.png</file>
+        <file>resources/icons/weather.ico</file>
+    </qresource>
+</RCC>
