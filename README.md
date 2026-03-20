@@ -111,7 +111,7 @@ void Weather::getWeatherInfo(QString cityName)
 }
 ```
 
-请注意，如果使用其他api，则需要修改weatherData.h相关的格式，再次不过多赘述。
+请注意，如果使用其他api，则需要修改weatherData.h相关的格式，在此不过多赘述。
 
 ---
 
