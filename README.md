@@ -70,6 +70,7 @@ WeatherQt/
 
 ### Qt Creator 方式
 
+针对Windows系统：
 1. 打开 Qt Creator
 2. 打开 `.pro` 工程文件
 3. 构建并运行项目
@@ -78,10 +79,17 @@ WeatherQt/
 
 ### 命令行方式
 
+针对嵌入式Linux开发板:
+作者是通过WSL，配置好QT-ARM后，编译的，如果您的编译方法与我不同，请以您的为准
 ```bash
-qmake
-make
-./WeatherQt
+cd /your_file_path
+/home/your_username/your_Qt_Sources/arm-qt/bin/qmake
+```
+随后，将生成好的Weather传入至您的开发板
+```bash
+chmod +x Weather
+./Weather
+/home/your_username/your_Qt_Sources/arm-qt/bin/qmake
 ```
 
 ---
@@ -100,7 +108,7 @@ QString apiKey = "你的API_KEY";
 
 ## ⚠️ 已知问题
 
-* 如果windows上，则无需关注输入法问题；如果是用于嵌入式设备，请自行编译适合的输入法来输入城市名（需设置 `QT_IM_MODULE`）
+* 如果windows上，则无需关注输入法问题；如果是用于嵌入式设备，请自行编译并移植适合的输入法来输入城市名（需设置 `QT_IM_MODULE`）
 * UI 适配仍有优化空间
 
 ---
